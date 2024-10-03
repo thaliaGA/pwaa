@@ -1,0 +1,59 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    background-color: #f5f5f5; /* Color de fondo */
+}
+
+.logo {
+    max-width: 14%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 20px; /* Espacio inferior entre la imagen y el formulario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional para dar efecto de profundidad */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 320px; /* Ancho del formulario */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Color del botón al pasar el ratón */
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 15px;
+}

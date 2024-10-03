@@ -1,0 +1,14 @@
+.home-container {
+    display: flex;
+    justify-content: space-around; /* Espacio entre las imágenes */
+    align-items: center; /* Centrar verticalmente */
+    padding: 20px; /* Espacio interno */
+    background-color: #f5f5f5; /* Fondo claro */
+}
+
+.home-image {
+    max-width: 30%; /* Ajustar el ancho máximo de las imágenes */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las imágenes */
+}
