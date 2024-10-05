@@ -7,9 +7,9 @@ import album3 from '../assets/album3.jpg';
 const Home = () => {
     return (
         <div className="home-container">
-            <img src={album1} alt="Image 1" className="home-image" />
-            <img src={album2} alt="Image 2" className="home-image" />
-            <img src={album3} alt="Image 3" className="home-image" />
+            <img src={album1} alt="Palaye Royale" className="home-image" />
+            <img src={album2} alt="Dance Gavin Dance" className="home-image" />
+            <img src={album3} alt="Pierce The Veil" className="home-image" />
         </div>
     );
 };

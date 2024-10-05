@@ -3,53 +3,54 @@
   "name": "cd album",
   "icons": [
     {
-      "src": "/logos/cd16.ico",
+      "src": "/logos/cd16.png",
       "sizes": "16x16",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
-      "src": "/logos/cd24.ico",
+      "src": "/logos/cd24.png",
       "sizes": "24x24",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
-      "src": "/logos/cd32.ico",
+      "src": "/logos/cd32.png",
       "sizes": "32x32",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
-      "src": "/logos/cd48.ico",
+      "src": "/logos/cd48.png",
       "sizes": "48x48",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
-      "src": "/logos/cd64.ico",
+      "src": "/logos/cd64.png",
       "sizes": "64x64",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
-      "src": "/logos/cd96.ico",
+      "src": "/logos/cd96.png",
       "sizes": "96x96",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
-      "src": "/logos/cd128.ico",
+      "src": "/logos/cd128.png",
       "sizes": "128x128",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
-      "src": "/logos/cd256.ico",
+      "src": "/logos/cd144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/logos/cd256.png",
       "sizes": "256x256",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "/logos/cd512.ico",
-      "sizes": "512x512",
-      "type": "image/x-icon"
+      "type": "image/png"
     }
   ],
   "start_url": ".",
   "display": "standalone",
+  "orientation":"any",
   "theme_color": "#000000",
   "background_color": "#FFFFFF"
 }
