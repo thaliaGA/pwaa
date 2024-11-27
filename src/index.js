@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -11,15 +12,15 @@ root.render(
   </React.StrictMode>
 );
 
-if ('serviceWorker' in navigator) {
+if('serviceWorker' in navigator && 'SyncManager' in window){
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
-      .then(registration => {
-        console.log('Service Worker jalando y registrado:', registration);
-      })
-      .catch(error => {
-        console.log('Chin, error al registrar Service Worker:', error);
-      });
+    .then(registration => {
+      console.log('Service Worker registrado con éxito:', registration);
+    })
+    .catch(error => {
+      console.error('Error al registrar el Service Worker:', error);
+    });
   });
 }
 

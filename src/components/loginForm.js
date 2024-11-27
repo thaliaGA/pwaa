@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; // Eliminar useEffect si no se usa
 import { useNavigate } from 'react-router-dom';
 import './LoginForm.css'; 
+import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
     const [email, setEmail] = useState('');
@@ -8,21 +9,33 @@ const LoginForm = () => {
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleSubmit = async (e) => {
+    e.preventDefault();
 
-        // Validación simple de usuario y contraseña
-        const validEmail = 'user@example.com';
-        const validPassword = 'password123';
+    const response = await fetch("http://localhost:4000/login", {
+        method: "POST", 
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({email, password}),
+    });
 
-        if (email === validEmail && password === validPassword) {
-            // Si los datos son correctos, redirige a la página del home
-            navigate('/home');
-        } else {
-            // Si los datos no son correctos, mostrar un mensaje de error
-            setError('Correo o contraseña incorrectos');
+    if (response.ok){
+        //Si la respuesta es exitosa, redirige al usuario
+        const data = await response.json();
+
+        //Guarda el userId en localStorage
+        localStorage.setItem("userId", data.userId)
+        console.log("Login sucessful:", data); 
+
+        navigate("/home"); 
+    }else{
+        const errorData = await response.json();
+        setError(errorData.message || "Error aliniciar sesión"); 
         }
     };
+
+    
 
     return (
         <div className="login-container">
@@ -51,6 +64,9 @@ const LoginForm = () => {
                     />
                 </div>
                 <button type="submit">Iniciar</button>
+                <div className="register-link">
+                    <p>¿No tienes cuenta? <Link to="/register">Regístrate aquí</Link></p>
+                </div>
             </form>
         </div>
     );

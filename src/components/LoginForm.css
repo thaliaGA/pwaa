@@ -57,3 +57,24 @@ button:hover {
     color: red;
     margin-bottom: 15px;
 }
+
+.register-link {
+    text-align: center;
+    
+ 
+margin-top: 15px;
+}
+
+.register-link p {
+    font-size: 0.9em;
+    color: #333;
+}
+
+.register-link a {
+    color: #007bff; /* Mismo color que el botón */
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
