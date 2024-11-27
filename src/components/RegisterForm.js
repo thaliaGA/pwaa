@@ -17,7 +17,7 @@ function RegisterForm() {
     };
   
     // Intenta enviar los datos al servidor
-    fetch('http://localhost:4000/register', {
+    fetch('https://musicback-748m.onrender.com/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

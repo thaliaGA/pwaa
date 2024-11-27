@@ -44,7 +44,7 @@ const Home = () => {
         const dataToSend = { ...formData, userId };
     
         try {
-            const response = await fetch('http://localhost:4000/register-music', {
+            const response = await fetch('https://musicback-748m.onrender.com/register-music', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const Home = () => {
 
                  // Enviar notificación push
             try {
-                const notificationResponse = await fetch('http://localhost:4000/sendNotification', {
+                const notificationResponse = await fetch('https://musicback-748m.onrender.com/sendNotification', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -160,7 +160,7 @@ const Home = () => {
                 if (allData.length > 0) {
                     for (const data of allData) {
                         try {
-                            const response = await fetch('http://localhost:4000/register-music', {
+                            const response = await fetch('https://musicback-748m.onrender.com/register-music', {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
@@ -212,7 +212,7 @@ const Home = () => {
                     };
 
                     // Enviar la suscripción a la API
-                    const response = await fetch('http://localhost:4000/Suscription', {
+                    const response = await fetch('https://musicback-748m.onrender.com/Suscription', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'

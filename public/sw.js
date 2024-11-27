@@ -93,7 +93,7 @@ function syncUsuarios() {
                 }
 
                 const promises = music.map(music => {
-                    return fetch('http://localhost:4000/register-music', {
+                    return fetch('https://musicback-748m.onrender.com/register-music', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
